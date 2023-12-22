@@ -77,6 +77,7 @@ def line_chart():
   Deaths=df["Deaths"]
   Active=df["Active"]
   plt.xlabel("Districts")
+  plt.xticks(rotation=90)
   Y=0
   while Y!=6:
       print("                                                   ")
@@ -93,21 +94,25 @@ def line_chart():
           plt.ylabel("Confirmed Cases")
           plt.title("Districts Wise Confirmed Cases as on 13-8-2022")
           plt.plot(District, Confirmed, color='b')
+          plt.xticks(rotation=90)
           plt.show()
       elif Y == 2:
           plt.ylabel("Recovered Cases")
           plt.title("Districts Wise Recovered Cases as on 13-8-2022")
           plt.plot(District, Recovered, color='g')
+          plt.xticks(rotation=90)
           plt.show()
       elif Y == 3:
           plt.ylabel("Death Cases")
           plt.title("Districts Wise Death Cases as on 13-8-2022")
           plt.plot(District, Deaths, color='r')
+          plt.xticks(rotation=90)
           plt.show()
       elif Y == 4:
           plt.ylabel("Active Cases")
           plt.title("Districts Wise Active Cases as on 13-8-2022")
           plt.plot(District, Active, color='purple')
+          plt.xticks(rotation=90)
           plt.show()
       elif Y == 5:
           plt.ylabel("Number of cases")
@@ -117,6 +122,7 @@ def line_chart():
           plt.plot(District, Deaths, color='r', label = "Districts Wise Death Cases")
           plt.plot(District, Active, color='purple', label = "Districts Wise Active Cases")
           plt.legend()
+          plt.xticks(rotation=90)
           plt.show()
       elif Y==6:
           print("Line Graph Closed.....")
@@ -133,6 +139,7 @@ def bar_chart():
   Deaths=df["Deaths"]
   Active=df["Active"]
   plt.xlabel("Districts")
+  plt.xticks(rotation=90)
   print("                                                   ")
   print("                             Bar Graph Menu")
   print("                     ******************************")
@@ -150,27 +157,32 @@ def bar_chart():
           plt.ylabel("Confirmed Cases")
           plt.title("Districts Wise Confirmed Cases as Data as on 13-8-2022")
           plt.bar(District, Confirmed, color='blue', width = 0.5)
+          plt.xticks(rotation=90)
           plt.show()
       elif Y == 2:
           plt.ylabel("Recovered Cases")
           plt.title("Districts Wise Recovered Cases as Data as on 13-8-2022")
           plt.bar(District, Recovered, color='green', width = 0.5)
+          plt.xticks(rotation=90)
           plt.show()
       elif Y == 3:
           plt.ylabel("Death Cases")
           plt.title("Districts Wise Death Casesas Data as on 13-8-2022")
           plt.bar(District, Deaths, color='red', width = 0.5)
+          plt.xticks(rotation=90)
           plt.show()
       elif Y == 4:
           plt.ylabel("Active Cases")
           plt.title("Districts Wise Active Cases as Data as on 13-8-2022")
           plt.bar(District, Active, color='purple', width = 0.5)
+          plt.xticks(rotation=90)
           plt.show()
       elif Y == 5:
           plt.bar(District, Confirmed, color='b', width = 0.5, label = "Districts Wise Confirmed Cases")
           plt.bar(District, Recovered, color='g', width = 0.5, label = "Districts Wise Recovered Cases")
           plt.bar(District, Deaths, color='r', width = 0.5, label = "Districts Wise Death Cases")
           plt.bar(District, Active, color='purple',width = 0.5, label = "Districts Wise Active Cases")
+          plt.xticks(rotation=90)
           plt.legend()
           plt.show()
       elif Y == 6:
@@ -180,6 +192,7 @@ def bar_chart():
           plt.bar(D+0.25, Recovered, width, color='g', label = "Districts Wise Recovered Cases")
           plt.bar(D+0.50, Deaths, width, color='r', label = "Districts Wise Death Cases")
           plt.bar(D+0.75, Active ,width, color='purple', label = "Districts Wise Active Cases")
+          plt.xticks(rotation=90)
           plt.legend()
           plt.show()
       elif Y==7:
